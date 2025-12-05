@@ -1,0 +1,5 @@
+{
+  "name": "SOW Guardian AI",
+  "description": "An intelligent Statement of Work (SOW) analyzer that evaluates documents for clarity, completeness, and risk, providing actionable recommendations for competitive bidding.",
+  "requestFramePermissions": []
+}
