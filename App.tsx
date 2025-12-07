@@ -69,10 +69,10 @@ const App: React.FC = () => {
       {!session ? (
         <Login onLogin={handleLogin} />
       ) : (
-        <div className={`h-full grid gap-6 transition-all duration-500 ease-in-out ${isComplete ? 'grid-cols-12' : 'grid-cols-1 max-w-2xl mx-auto place-content-center'}`}>
+        <div className={`grid gap-6 transition-all duration-500 ease-in-out ${isComplete ? 'grid-cols-1 lg:grid-cols-12 items-start' : 'grid-cols-1 max-w-2xl mx-auto place-content-center min-h-[80vh]'}`}>
           
           {/* Left Panel / Main Input Area */}
-          <div className={`flex flex-col gap-6 transition-all duration-500 ${isComplete ? 'col-span-4' : 'w-full'}`}>
+          <div className={`flex flex-col gap-6 transition-all duration-500 ${isComplete ? 'lg:col-span-4 lg:sticky lg:top-24' : 'w-full'}`}>
             
             {/* Header text when not complete */}
             {!isComplete && (
@@ -157,7 +157,7 @@ const App: React.FC = () => {
 
           {/* Right Panel / Report Area */}
           {isComplete && report && (
-            <div className="col-span-8 h-full animate-slideInRight">
+            <div className="lg:col-span-8 animate-slideInRight">
               <ReportView markdown={report} />
             </div>
           )}

@@ -26,8 +26,8 @@ export const ReportView: React.FC<ReportViewProps> = ({ markdown }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 h-full flex flex-col overflow-hidden">
-      <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 flex flex-col h-full">
+      <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50/50 sticky top-0 z-10 rounded-t-xl">
         <h2 className="text-lg font-semibold text-slate-800 flex items-center gap-2">
           <span className="w-2 h-6 bg-brand-500 rounded-full"></span>
           Analysis Report
@@ -52,7 +52,7 @@ export const ReportView: React.FC<ReportViewProps> = ({ markdown }) => {
         </div>
       </div>
       
-      <div className="flex-1 overflow-y-auto p-8 custom-scrollbar bg-white">
+      <div className="p-8 bg-white rounded-b-xl">
         <article className="markdown-body max-w-none">
             <ReactMarkdown>{markdown}</ReactMarkdown>
         </article>

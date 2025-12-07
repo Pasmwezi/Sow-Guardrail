@@ -10,8 +10,8 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, session, onLogout }) => {
   return (
-    <div className="h-screen flex flex-col bg-slate-50">
-      <header className="bg-white border-b border-slate-200 shadow-sm z-10 flex-shrink-0">
+    <div className="min-h-screen flex flex-col bg-slate-50">
+      <header className="bg-white border-b border-slate-200 shadow-sm z-10 sticky top-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="bg-brand-600 p-1.5 rounded-lg">
@@ -52,8 +52,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, session, onLogout }) =
         </div>
       </header>
       
-      <main className="flex-1 overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full py-6">
+      <main className="flex-1 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {children}
         </div>
       </main>
